@@ -3,7 +3,7 @@ const BlogFooter = () => {
     <footer className="panel-retro p-3 mt-4 text-center">
       <div className="pixel-divider mb-2" />
       <p className="font-retro text-lg text-muted-foreground">
-        © 2004-2026 NeoOtaku Zone | All Rights Reserved
+        © 2004-2026 Syber Sentral | All Rights Reserved
       </p>
       <p className="font-retro text-base text-muted-foreground mt-1">
         Powered by pure HTML spirit ★ No AI was harmed in the making of this site
