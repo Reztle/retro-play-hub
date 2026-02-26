@@ -6,58 +6,56 @@
 
 @layer base {
   :root {
-    --background: 230 25% 8%;
-    --foreground: 180 100% 85%;
+    --background: 240 20% 10%;
+    --foreground: 0 0% 90%;
 
-    --card: 230 20% 12%;
-    --card-foreground: 180 100% 85%;
+    --card: 240 15% 15%;
+    --card-foreground: 0 0% 90%;
 
-    --popover: 230 20% 12%;
-    --popover-foreground: 180 100% 85%;
+    --popover: 240 15% 15%;
+    --popover-foreground: 0 0% 90%;
 
-    --primary: 180 100% 50%;
-    --primary-foreground: 230 25% 8%;
+    --primary: 180 100% 40%;
+    --primary-foreground: 0 0% 0%;
 
-    --secondary: 320 100% 60%;
+    --secondary: 300 80% 55%;
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 230 15% 18%;
-    --muted-foreground: 180 30% 60%;
+    --muted: 240 10% 22%;
+    --muted-foreground: 0 0% 60%;
 
-    --accent: 50 100% 55%;
-    --accent-foreground: 230 25% 8%;
+    --accent: 60 100% 50%;
+    --accent-foreground: 0 0% 0%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 80% 55%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 180 60% 30%;
-    --input: 230 15% 18%;
-    --ring: 180 100% 50%;
+    --border: 240 10% 35%;
+    --input: 240 10% 22%;
+    --ring: 180 100% 40%;
 
     --radius: 0px;
 
-    --sidebar-background: 230 20% 10%;
-    --sidebar-foreground: 180 100% 85%;
-    --sidebar-primary: 180 100% 50%;
-    --sidebar-primary-foreground: 230 25% 8%;
-    --sidebar-accent: 320 100% 60%;
+    --sidebar-background: 240 15% 12%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 180 100% 40%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 300 80% 55%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 180 60% 30%;
-    --sidebar-ring: 180 100% 50%;
-
-    /* Custom tokens */
-    --glow-cyan: 0 0 10px hsl(180 100% 50% / 0.5), 0 0 20px hsl(180 100% 50% / 0.3);
-    --glow-magenta: 0 0 10px hsl(320 100% 60% / 0.5), 0 0 20px hsl(320 100% 60% / 0.3);
-    --glow-yellow: 0 0 10px hsl(50 100% 55% / 0.5), 0 0 20px hsl(50 100% 55% / 0.3);
-    --border-bevel: inset 1px 1px 0 hsl(180 60% 50% / 0.4), inset -1px -1px 0 hsl(230 30% 5% / 0.6);
-    --font-pixel: 'Press Start 2P', monospace;
-    --font-retro: 'VT323', monospace;
-    --font-body: 'Comic Neue', cursive, sans-serif;
+    --sidebar-border: 240 10% 35%;
+    --sidebar-ring: 180 100% 40%;
 
     /* Category colors */
-    --cat-games: 120 80% 45%;
-    --cat-anime: 320 100% 60%;
-    --cat-tokusatsu: 50 100% 55%;
+    --cat-games: 120 70% 35%;
+    --cat-anime: 300 80% 50%;
+    --cat-tokusatsu: 35 90% 50%;
+    --cat-music: 200 80% 50%;
+
+    /* Era fonts - system fonts that existed in mid-2000s */
+    --font-pixel: 'Press Start 2P', 'Courier New', monospace;
+    --font-retro: 'VT323', 'Courier New', monospace;
+    --font-body: 'Comic Neue', 'Comic Sans MS', 'Trebuchet MS', cursive, sans-serif;
+    --font-heading: 'Verdana', 'Geneva', sans-serif;
   }
 }
 
@@ -69,17 +67,11 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
-    background-image: 
-      radial-gradient(1px 1px at 10% 20%, hsl(180 100% 80% / 0.3) 0%, transparent 100%),
-      radial-gradient(1px 1px at 30% 60%, hsl(320 100% 80% / 0.2) 0%, transparent 100%),
-      radial-gradient(1px 1px at 50% 10%, hsl(50 100% 80% / 0.2) 0%, transparent 100%),
-      radial-gradient(1px 1px at 70% 40%, hsl(180 100% 80% / 0.15) 0%, transparent 100%),
-      radial-gradient(1px 1px at 90% 80%, hsl(320 100% 80% / 0.15) 0%, transparent 100%),
-      radial-gradient(1px 1px at 20% 90%, hsl(180 100% 80% / 0.2) 0%, transparent 100%),
-      radial-gradient(1px 1px at 80% 15%, hsl(50 100% 80% / 0.15) 0%, transparent 100%),
-      radial-gradient(1px 1px at 60% 70%, hsl(180 100% 80% / 0.1) 0%, transparent 100%);
-    background-size: 100% 100%;
-    image-rendering: pixelated;
+    font-size: 13px;
+    background-color: hsl(var(--background));
+    background-image:
+      url("data:image/svg+xml,%3Csvg width='8' height='8' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='1' height='1' x='0' y='0' fill='%23ffffff08'/%3E%3Crect width='1' height='1' x='4' y='4' fill='%23ffffff05'/%3E%3C/svg%3E");
+    background-repeat: repeat;
   }
 }
 
@@ -96,41 +88,87 @@
     font-family: var(--font-body);
   }
 
-  .panel-retro {
-    background: hsl(var(--card));
-    border: 3px solid hsl(var(--border));
-    box-shadow: var(--border-bevel), 4px 4px 0 hsl(230 30% 5% / 0.5);
+  .font-heading {
+    font-family: var(--font-heading);
   }
 
+  /* Authentic mid-2000s table-cell panel with outset/inset borders */
+  .panel-retro {
+    background: hsl(var(--card));
+    border: 2px outset hsl(0 0% 50%);
+  }
+
+  .panel-inset {
+    background: hsl(var(--background));
+    border: 2px inset hsl(0 0% 50%);
+    padding: 4px;
+  }
+
+  /* Simple HR style separators */
+  .pixel-divider {
+    border: none;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(var(--primary)),
+      hsl(var(--secondary)),
+      hsl(var(--primary)),
+      transparent
+    );
+  }
+
+  /* Marquee scroll */
+  .marquee-scroll {
+    animation: marquee 25s linear infinite;
+  }
+
+  /* Classic blink */
+  .blink-slow {
+    animation: blink 1s step-end infinite;
+  }
+
+  /* Scrolling text that was common on 2000s sites */
+  .scroll-text {
+    animation: scrollUp 10s linear infinite;
+  }
+
+  /* 88x31 badge style */
+  .badge-88x31 {
+    display: inline-block;
+    width: 88px;
+    height: 31px;
+    border: 1px solid hsl(0 0% 40%);
+    font-size: 8px;
+    line-height: 31px;
+    text-align: center;
+    font-family: var(--font-pixel);
+    background: hsl(var(--muted));
+  }
+
+  /* Link styling - era accurate underline + color change on hover */
+  .link-retro {
+    color: hsl(var(--primary));
+    text-decoration: underline;
+  }
+  .link-retro:hover {
+    color: hsl(var(--accent));
+  }
+  .link-retro:visited {
+    color: hsl(var(--secondary));
+  }
+
+  /* Glow effects - toned down for era accuracy (more like bold colors than neon) */
   .glow-cyan {
-    text-shadow: var(--glow-cyan);
+    color: hsl(var(--primary));
   }
 
   .glow-magenta {
-    text-shadow: var(--glow-magenta);
+    color: hsl(var(--secondary));
   }
 
   .glow-yellow {
-    text-shadow: var(--glow-yellow);
-  }
-
-  .marquee-scroll {
-    animation: marquee 20s linear infinite;
-  }
-
-  .blink-slow {
-    animation: blink 1.5s step-end infinite;
-  }
-
-  .pixel-divider {
-    background: repeating-linear-gradient(
-      90deg,
-      hsl(var(--primary)) 0px,
-      hsl(var(--primary)) 4px,
-      transparent 4px,
-      transparent 8px
-    );
-    height: 4px;
+    color: hsl(var(--accent));
   }
 }
 
@@ -142,4 +180,9 @@
 @keyframes blink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+@keyframes scrollUp {
+  0% { transform: translateY(100%); }
+  100% { transform: translateY(-100%); }
 }
