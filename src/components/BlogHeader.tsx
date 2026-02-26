@@ -5,7 +5,7 @@ const BlogHeader = () => {
         ★ Syber Sentral ★
       </h1>
       <p className="font-retro text-xl text-secondary text-center mt-2 glow-magenta">
-        ~ Games • Anime • Tokusatsu ~
+        ~ Games • Anime • Tokusatsu • Music ~
       </p>
       <div className="pixel-divider mt-3" />
       <div className="overflow-hidden mt-2">
