@@ -60,11 +60,13 @@ export default {
         games: "hsl(var(--cat-games))",
         anime: "hsl(var(--cat-anime))",
         tokusatsu: "hsl(var(--cat-tokusatsu))",
+        music: "hsl(var(--cat-music))",
       },
       fontFamily: {
-        pixel: ["'Press Start 2P'", "monospace"],
-        retro: ["'VT323'", "monospace"],
-        body: ["'Comic Neue'", "cursive", "sans-serif"],
+        pixel: ["'Press Start 2P'", "'Courier New'", "monospace"],
+        retro: ["'VT323'", "'Courier New'", "monospace"],
+        body: ["'Comic Neue'", "'Comic Sans MS'", "'Trebuchet MS'", "cursive", "sans-serif"],
+        heading: ["'Verdana'", "'Geneva'", "sans-serif"],
       },
       borderRadius: {
         lg: "var(--radius)",
