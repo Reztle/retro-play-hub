@@ -5,58 +5,50 @@ import BlogFooter from "@/components/BlogFooter";
 
 const posts = [
   {
-    title: "Kamen Rider Kabuto is SO GOOD you guys",
-    date: "Feb 25, 2006",
+    title: "Kamen Rider Gavv is PEAK tokusatsu!!",
+    date: "Feb 25, 2026",
     category: "tokusatsu" as const,
-    content: `OK so I just marathoned the first 8 episodes and I have SO MANY THOUGHTS omg. The Clock Up sequences are insane, Tendou is the coolest rider ever (dont @ me lol) and the Worm designs are actually creepy??\n\nThe henshin sequence where he goes from Masked Form to Rider Form... *chef's kiss* Cast Off is the best gimmick since Faiz's phone thing.\n\nSeriously if ur not watching this ur missing out!! Go download it from TV-Nihon NOW.\n\nRating: ***** (5/5, no question)`,
-    mood: "HYPED =D",
-    music: "Kamen Rider Kabuto OP - 'NEXT LEVEL' by YU-KI",
+    content: `OK so I just finished watching the latest arc and I have SO MANY THOUGHTS. The transformation sequences are absolutely gorgeous, the suit design is chef's kiss, and the story is actually making me emotional??\n\nThe villain reveal in ep 20 caught me completely off guard. I won't spoil it but if you know, you know. Also the crossover teaser at the end... HYPE!!\n\nRating: ★★★★★ (5/5 stars, no question)`,
+    mood: "HYPED ⚡",
+    music: "Kamen Rider Gavv OP - 'CHEMY×STORY'",
   },
   {
-    title: "Kingdom Hearts II - 60 hours in and still going o_o",
-    date: "Feb 20, 2006",
+    title: "Final Fantasy VII Rebirth - 100 Hours In",
+    date: "Feb 20, 2026",
     category: "games" as const,
-    content: `I finally got KH2 and WOW... Squaresoft (yes i still call them that lol) really outdid themselves. The combat is sooo much smoother than KH1, Drive Forms are addicting, and the MUSIC omg Yoko Shimomura is a goddess.\n\nCurrently stuck on Sephiroth. He keeps one-shotting me with that stupid move. If anyone has tips plz leave a comment >_<\n\nAlso the Timeless River world is everything. Playing as retro Mickey Mouse Sora?? Too good haha.\n\nSpace Paranoids is awesome too, the Tron world looks so cool in the KH style ^_^`,
-    mood: "Determined >:3",
-    music: "Utada Hikaru - Passion ~After the Battle~",
+    content: `I finally got around to playing FFVII Rebirth and wow... Square really outdid themselves. The open world is massive, the combat system is even better than Remake, and the music??? Nobuo Uematsu is a god.\n\nCurrently stuck on this optional boss that keeps one-shotting my party. If anyone has tips please leave a comment lol.\n\nAlso the Gold Saucer is everything I dreamed it would be. I spent like 10 hours just doing mini-games haha.`,
+    mood: "Determined 🎮",
+    music: "FFVII Rebirth OST - 'Those Who Fight Further'",
   },
   {
-    title: "Bleach is getting REALLY good rn *__*",
-    date: "Feb 15, 2006",
+    title: "Dandadan might be anime of the year",
+    date: "Feb 15, 2026",
     category: "anime" as const,
-    content: `OK the Soul Society arc just ended and HOLY CRAP that was peak shounen. Studio Pierrot actually put effort into the animation for once lol. Byakuya vs Ichigo is one of the best fights ive ever seen in anime.\n\nThe Bankai reveals had me screaming. And the plot twist with Aizen... I did NOT see that coming. If u got spoiled on that im sorry for ur loss ;_;\n\nNow its going into some filler arc tho... hope it doesnt last too long. I just wanna see the Arrancar stuff from the manga!!\n\nIf ur not watching this, what r u even doing?? Go to AnimeSuki and grab it XD`,
-    mood: "Excited ^o^",
-    music: "Bleach OP3 - 'Ichirin no Hana' by HIGH and MIGHTY COLOR",
+    content: `Science SARU really went all out with the animation quality on this one. Every episode looks like a movie. The humor is perfect, the action scenes are insane, and Momo & Okarun have the best dynamic in anime right now.\n\nThe turbo granny arc had me rolling on the floor laughing. This is the kind of anime that reminds me why I fell in love with the medium in the first place.\n\nIf you're not watching this, what are you even doing??`,
+    mood: "Excited ✨",
+    music: "Dandadan OP - 'Otonoke'",
   },
   {
-    title: "My Top 10 Super Sentai Series (fight me lol)",
-    date: "Feb 10, 2006",
+    title: "My Top 10 Super Sentai Series (fight me)",
+    date: "Feb 10, 2026",
     category: "tokusatsu" as const,
-    content: `Been rewatching a bunch of Sentai with my friend on AIM so heres my definitive ranking:\n\n1. Dekaranger (obviously)\n2. Jetman\n3. Dairanger\n4. Timeranger\n5. Abaranger\n6. Megaranger\n7. Hurricaneger\n8. Gaoranger\n9. Magiranger\n10. Boukenger (its only just started but its alrdy so good!!)\n\nI KNOW some of these r controversial picks. Leave a comment and tell me ur list!! No wrong answers (except if u dont have Dekaranger in top 3, then we cant be friends lol)\n\np.s. - does anyone have the Boukenger OP mp3?? my kazaa is being weird >_>`,
-    mood: "Nostalgic ^_^",
-  },
-  {
-    title: "New L'Arc~en~Ciel album is FIRE",
-    date: "Feb 05, 2006",
-    category: "music" as const,
-    content: `AWAKE dropped and its incredible omg. Hyde's vocals r on another level as always. My fav tracks so far:\n\n1. New World (this song makes me wanna cry T_T)\n2. Killing Me\n3. Twinkle Twinkle\n4. My Dear\n\nAlso been listening to a lot of Asian Kung-Fu Generation and FLOW lately. Rewrite is stuck in my head 24/7 thanks to FMA lol.\n\nDoes anyone know any good jpop/jrock download sites?? My usual one got taken down ;_; I tried Limewire but everything is mislabeled ugh\n\nLeave ur fav jrock bands in the comments!! I need new stuff to listen to =D`,
-    mood: "musical~ d(^_^)b",
-    music: "L'Arc~en~Ciel - New World",
+    content: `Been rewatching a bunch of Sentai lately so here's my definitive ranking:\n\n1. Gokaiger (obviously)\n2. Shinkenger\n3. Dekaranger\n4. Timeranger\n5. Gekiranger\n6. Jetman\n7. Dairanger\n8. Go-Busters\n9. ToQger\n10. Lupinranger vs Patranger\n\nI KNOW some of these are controversial picks. Leave a comment and tell me your list!! No wrong answers (except if you don't have Gokaiger in top 3, then we can't be friends lol)`,
+    mood: "Nostalgic 🌟",
   },
 ];
 
 const Index = () => {
   return (
-    <div className="min-h-screen py-3 px-2">
+    <div className="min-h-screen py-4 px-2">
       <div className="container max-w-5xl mx-auto">
         <BlogHeader />
-        <div className="flex flex-col md:flex-row gap-3">
+        <div className="flex flex-col md:flex-row gap-4">
           <main className="flex-1 min-w-0">
             {posts.map((post, i) => (
               <BlogPost key={i} {...post} />
             ))}
           </main>
-          <div className="w-full md:w-56 shrink-0">
+          <div className="w-full md:w-64 shrink-0">
             <Sidebar />
           </div>
         </div>
