@@ -2,7 +2,7 @@ const BlogHeader = () => {
   return (
     <header className="panel-retro p-4 mb-4">
       <h1 className="font-pixel text-xl md:text-2xl text-primary glow-cyan text-center leading-relaxed">
-        ★ NeoOtaku Zone ★
+        ★ Syber Sentral ★
       </h1>
       <p className="font-retro text-xl text-secondary text-center mt-2 glow-magenta">
         ~ Games • Anime • Tokusatsu ~
@@ -14,7 +14,7 @@ const BlogHeader = () => {
         </p>
       </div>
       <nav className="flex flex-wrap justify-center gap-2 mt-3">
-        {["Home", "Games", "Anime", "Tokusatsu", "Links", "About"].map((item) => (
+        {["Home", "Games", "Anime", "Tokusatsu", "Music", "Links", "About"].map((item) => (
           <button
             key={item}
             className="font-pixel text-[10px] px-3 py-2 bg-muted border-2 border-border text-foreground hover:bg-primary hover:text-primary-foreground transition-colors"
