@@ -17,11 +17,11 @@ const Sidebar = () => {
         <h3 className="font-pixel text-[10px] text-secondary glow-magenta mb-2">About Me</h3>
         <div className="pixel-divider mb-2" />
         <div className="font-retro text-lg text-foreground space-y-1">
-          <p>Name: Neo</p>
-          <p>Age: Old enough to remember dial-up</p>
-          <p>Fav Game: Chrono Trigger</p>
+          <p>Name: Sen</p>
+          <p>Age: 19</p>
+          <p>Fav Game: Section 8: Prejudice</p>
           <p>Fav Anime: Evangelion</p>
-          <p>Fav Rider: Kamen Rider W</p>
+          <p>Fav Rider: Kamen Rider Zero-One</p>
         </div>
       </div>
 
@@ -69,7 +69,7 @@ const Sidebar = () => {
 
       {/* Mini Calendar */}
       <div className="panel-retro p-3 text-center">
-        <p className="font-pixel text-[8px] text-secondary mb-1">Est. 2004</p>
+        <p className="font-pixel text-[8px] text-secondary mb-1">Est. 2026</p>
         <p className="font-retro text-base text-muted-foreground">
           Best viewed in 1024x768
         </p>
