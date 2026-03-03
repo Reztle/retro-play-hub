@@ -1,33 +1,44 @@
 interface BlogPostProps {
   title: string;
   date: string;
-  category: "games" | "anime" | "tokusatsu";
+  tags?: string[];
+  selectedTag?: string;
   content: string;
   mood?: string;
   music?: string;
+  audio?: string; // optional URL for playable audio
 }
 
-const categoryColors = {
-  games: "bg-games text-primary-foreground",
-  anime: "bg-anime text-secondary-foreground",
-  tokusatsu: "bg-tokusatsu text-primary-foreground",
-};
-
-const categoryEmoji = {
-  games: "🎮",
-  anime: "📺",
-  tokusatsu: "⚡",
-};
-
-const BlogPost = ({ title, date, category, content, mood, music }: BlogPostProps) => {
+// tags render below; category-specific styling has been removed
+const BlogPost = ({ title, date, tags = [], selectedTag, content, mood, music, audio }: BlogPostProps) => {
   return (
     <article className="panel-retro p-4 mb-4">
       <div className="flex flex-wrap items-center gap-2 mb-2">
-        <span className={`font-pixel text-[8px] px-2 py-1 ${categoryColors[category]}`}>
-          {categoryEmoji[category]} {category.toUpperCase()}
-        </span>
         <span className="font-retro text-base text-muted-foreground">{date}</span>
       </div>
+
+      {/* render additional tags if provided */}
+      {tags.length > 0 && (
+        <div className="flex flex-wrap gap-1 mb-2">
+          {tags.map((tag) => {
+            const isActive =
+              selectedTag && tag.toLowerCase() === selectedTag.toLowerCase();
+            return (
+              <span
+                key={tag}
+                className={`font-pixel text-[8px] px-2 py-1 border border-border transition-colors ${
+                  isActive
+                    ? "bg-primary text-primary-foreground"
+                    : "bg-muted text-foreground"
+                }`}
+              >
+                {tag}
+              </span>
+            );
+          })}
+        </div>
+      )}
+
       <h2 className="font-retro text-2xl text-primary glow-cyan mb-2">{title}</h2>
       <div className="pixel-divider mb-3" />
       <div className="font-body text-base text-foreground leading-relaxed whitespace-pre-line">
@@ -37,6 +48,17 @@ const BlogPost = ({ title, date, category, content, mood, music }: BlogPostProps
         <div className="mt-3 pt-2 border-t-2 border-border font-retro text-base">
           {mood && <p className="text-secondary">Current Mood: {mood}</p>}
           {music && <p className="text-accent">Now Playing: {music} ♪</p>}
+        </div>
+      )}
+      {audio && (
+        <div className="mt-3">
+          <audio
+            controls
+            className="w-full bg-card border-2 border-primary text-primary rounded-none ring-2 ring-primary"
+          >
+            <source src={encodeURI(audio)} />
+            Your browser does not support the audio element.
+          </audio>
         </div>
       )}
       <div className="flex gap-2 mt-3">

@@ -1,58 +1,33 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
-const Sidebar = () => {
-  const [count, setCount] = useState(48721);
+export default function Sidebar() {
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCount((c) => c + Math.floor(Math.random() * 3));
-    }, 15000);
-    return () => clearInterval(interval);
+    fetch("http://localhost:3001/api/hit")
+      .then(res => res.json())
+      .then(data => setCount(data.count))
+      .catch(err => console.error("Hit counter error:", err));
   }, []);
 
-  return (
-    <aside className="space-y-4">
-      {/* About Me */}
-      <div className="panel-retro p-3">
-        <h3 className="font-pixel text-[10px] text-secondary glow-magenta mb-2">About Me</h3>
-        <div className="pixel-divider mb-2" />
-        <div className="font-retro text-lg text-foreground space-y-1">
-          <p>Name: Sen</p>
-          <p>Age: 19</p>
-          <p>Fav Game: Section 8: Prejudice</p>
-          <p>Fav Anime: Evangelion</p>
-          <p>Fav Rider: Kamen Rider Zero-One</p>
-        </div>
-      </div>
+  const links = [
+    { label: "Chatroom", url: "http://localhost:5000/chatroom" },
+    { label: "Henshin Justice", url: "#" },
+    { label: "Neon Hacking", url: "#" },
+    { label: "Cool Links", url: "#" },
+  ];
 
-      {/* Updates */}
+  return (
+    <div className="sidebar">
+
+      {/* Cool Links */}
       <div className="panel-retro p-3">
-        <h3 className="font-pixel text-[10px] text-accent glow-yellow mb-2">Updates</h3>
+        <h3 className="font-pixel text-[10px] text-accent glow-yellow mb-2">Menu</h3>
         <div className="pixel-divider mb-2" />
         <ul className="font-retro text-base text-foreground space-y-1">
-          <li>02/25 - New tokusatsu review!</li>
-          <li>02/20 - Updated links page</li>
-          <li>02/15 - Site redesign v3.0!</li>
-          <li>02/10 - Added guestbook</li>
-        </ul>
-      </div>
-
-      {/* Links */}
-      <div className="panel-retro p-3">
-        <h3 className="font-pixel text-[10px] text-primary glow-cyan mb-2">Cool Links</h3>
-        <div className="pixel-divider mb-2" />
-        <ul className="font-retro text-lg space-y-1">
-          {[
-            "GameFAQs",
-            "MyAnimeList",
-            "Henshin Justice",
-            "ROM Hacking",
-            "Newgrounds",
-          ].map((link) => (
-            <li key={link}>
-              <a href="#" className="text-primary hover:text-secondary transition-colors">
-                → {link}
-              </a>
+          {links.map((link, i) => (
+            <li key={i}>
+              <a href={link.url} className="hover:underline">{link.label}</a>
             </li>
           ))}
         </ul>
@@ -60,25 +35,31 @@ const Sidebar = () => {
 
       {/* Hit Counter */}
       <div className="panel-retro p-3 text-center">
-        <p className="font-pixel text-[8px] text-muted-foreground mb-1">Visitors</p>
-        <p className="font-retro text-2xl text-accent glow-yellow">{count.toLocaleString()}</p>
-        <p className="font-pixel text-[7px] text-muted-foreground mt-1 blink-slow">
-          ● Online Now
+        <p className="font-pixel text-[16px] text-accent glow-yellow">Visitor no.</p>
+        <p className="font-retro text-[60px] text-accent glow-yellow">
+          {count.toLocaleString()}
         </p>
+        <p className="font-pixel text-[10px] text-magenta mt-1 blink-slow">
+          ↖(￣▽￣) Welcome!
+        </p>
+      </div>
+
+      {/* Updates */}
+      <div className="panel-retro p-3">
+        <h3 className="font-pixel text-[10px] text-accent glow-yellow mb-2">Updates</h3>
+        <div className="pixel-divider mb-2" />
+        <ul className="font-retro text-base text-foreground space-y-1">
+          <li>28.02.2026 - Chatroom Works!</li>
+          <li>28.02.2026 - Hit Counter added</li>
+          <li>26.02.2026 - Site created</li>
+        </ul>
       </div>
 
       {/* Mini Calendar */}
       <div className="panel-retro p-3 text-center">
-        <p className="font-pixel text-[8px] text-secondary mb-1">Est. 2026</p>
-        <p className="font-retro text-base text-muted-foreground">
-          Best viewed in 1024x768
-        </p>
-        <p className="font-retro text-base text-muted-foreground">
-          Made with ♥ and HTML
-        </p>
+        <p className="font-pixel text-[8px] text-muted-foreground mb-1">Est. 2026</p>
+        <p className="font-pixel text-[7px] text-muted-foreground">Made with Lovable and Visual Studio</p>
       </div>
-    </aside>
+    </div>
   );
-};
-
-export default Sidebar;
+}

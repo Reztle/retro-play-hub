@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Syber Sentral</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="description" content="Games • Anime • Tokusatsu • Music" />
+    <meta name="author" content="Syber Sentral" />
+
+    <meta property="og:title" content="Syber Sentral" />
+    <meta property="og:description" content="Games • Anime • Tokusatsu • Music" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="" />
+
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 600px; margin: 40px auto; }
+        h1 { text-align: center; }
+        form { margin-bottom: 20px; }
+        input, textarea { width: 100%; padding: 8px; margin: 5px 0; }
+        button { padding: 8px 16px; }
+        .post { border-top: 1px solid #ccc; padding: 10px 0; }
+        .username { font-weight: bold; }
+
+    </style>
+</head>
+<body>
+    <h1>Chatroom</h1>
+
+    <form action="{{ url_for('post_message') }}" method="POST">
+        <label>Your name</label>
+        <input type="text" name="username" placeholder="Your name">
+
+        <label>Write a message...</label>
+        <textarea name="message" rows="3" placeholder="Write something..."></textarea>
+
+        <button type="submit">Post</button>
+    </form>
+
+    {% for post in posts %}
+        <div class="post">
+            <div class="username">{{ post.username }}</div>
+            <div class="message">{{ post.message }}</div>
+        </div>
+    {% else %}
+        <p>No posts yet. Be the first to say something.</p>
+    {% endfor %}
+</body>
+</html>
+

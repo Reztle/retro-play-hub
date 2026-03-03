@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Press+Start+2P&family=Comic+Neue:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 8%;
+    --foreground: 180 100% 85%;
+
+    --card: 230 20% 12%;
+    --card-foreground: 180 100% 85%;
+
+    --popover: 230 20% 12%;
+    --popover-foreground: 180 100% 85%;
+
+    --primary: 180 100% 50%;
+    --primary-foreground: 230 25% 8%;
+
+    --secondary: 320 100% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 230 15% 18%;
+    --muted-foreground: 180 30% 60%;
+
+    --accent: 50 100% 55%;
+    --accent-foreground: 230 25% 8%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 180 60% 30%;
+    --input: 230 15% 18%;
+    --ring: 180 100% 50%;
+
+    --radius: 0px;
+
+    --sidebar-background: 230 20% 10%;
+    --sidebar-foreground: 180 100% 85%;
+    --sidebar-primary: 180 100% 50%;
+    --sidebar-primary-foreground: 230 25% 8%;
+    --sidebar-accent: 320 100% 60%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 180 60% 30%;
+    --sidebar-ring: 180 100% 50%;
+
+    /* Custom tokens */
+    --glow-cyan: 0 0 10px hsl(180 100% 50% / 0.5), 0 0 20px hsl(180 100% 50% / 0.3);
+    --glow-magenta: 0 0 10px hsl(320 100% 60% / 0.5), 0 0 20px hsl(320 100% 60% / 0.3);
+    --glow-yellow: 0 0 10px hsl(50 100% 55% / 0.5), 0 0 20px hsl(50 100% 55% / 0.3);
+    --border-bevel: inset 1px 1px 0 hsl(180 60% 50% / 0.4), inset -1px -1px 0 hsl(230 30% 5% / 0.6);
+    --font-pixel: 'Press Start 2P', monospace;
+    --font-retro: 'VT323', monospace;
+    --font-body: 'Comic Neue', cursive, sans-serif;
+
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    background-image: 
+      radial-gradient(1px 1px at 10% 20%, hsl(180 100% 80% / 0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 30% 60%, hsl(320 100% 80% / 0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 50% 10%, hsl(50 100% 80% / 0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 70% 40%, hsl(180 100% 80% / 0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 80%, hsl(320 100% 80% / 0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 20% 90%, hsl(180 100% 80% / 0.2) 0%, transparent 100%),
+      radial-gradient(1px 1px at 80% 15%, hsl(50 100% 80% / 0.15) 0%, transparent 100%),
+      radial-gradient(1px 1px at 60% 70%, hsl(180 100% 80% / 0.1) 0%, transparent 100%);
+    background-size: 100% 100%;
+    image-rendering: pixelated;
+  }
+}
+
+@layer utilities {
+  .font-pixel {
+    font-family: var(--font-pixel);
+  }
+
+  .font-retro {
+    font-family: var(--font-retro);
+  }
+
+  .font-body {
+    font-family: var(--font-body);
+  }
+
+  .panel-retro {
+    background: hsl(var(--card));
+    border: 3px solid hsl(var(--border));
+    box-shadow: var(--border-bevel), 4px 4px 0 hsl(230 30% 5% / 0.5);
+  }
+
+  .glow-cyan {
+    text-shadow: var(--glow-cyan);
+  }
+
+  .glow-magenta {
+    text-shadow: var(--glow-magenta);
+  }
+
+  .glow-yellow {
+    text-shadow: var(--glow-yellow);
+  }
+
+  .marquee-scroll {
+    animation: marquee 20s linear infinite;
+  }
+
+  .blink-slow {
+    animation: blink 1.5s step-end infinite;
+  }
+
+  .pixel-divider {
+    background: repeating-linear-gradient(
+      90deg,
+      hsl(var(--primary)) 0px,
+      hsl(var(--primary)) 4px,
+      transparent 4px,
+      transparent 8px
+    );
+    height: 4px;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
