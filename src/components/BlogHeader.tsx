@@ -1,10 +1,20 @@
+import { useNavigate, useLocation } from "react-router-dom";
+
 interface BlogHeaderProps {
   selectedTab: string;
   onTabClick: (tab: string) => void;
 }
 
 const BlogHeader = ({ selectedTab, onTabClick }: BlogHeaderProps) => {
+  const navigate = useNavigate();
+  const location = useLocation();
   const tabs = ["Home", "Games", "Manga", "Anime", "Tokusatsu", "Music", "Art", "Fashion", "Travel"];
+  const pages = [
+    { label: "Links", path: "/links" },
+    { label: "About", path: "/about" },
+    { label: "Art Gallery", path: "/art-gallery" },
+    { label: "Music Shelf", path: "/music-shelf" },
+  ];
 
   return (
     <header className="panel-retro p-4 mb-4">
@@ -24,7 +34,7 @@ const BlogHeader = ({ selectedTab, onTabClick }: BlogHeaderProps) => {
         {tabs.map((item) => (
           <button
             key={item}
-            onClick={() => onTabClick(item)}
+            onClick={() => { if (location.pathname !== "/") navigate("/"); onTabClick(item); }}
             className={`font-pixel text-[10px] px-3 py-2 border-2 border-border transition-colors ${
               selectedTab === item
                 ? "bg-primary text-primary-foreground"
@@ -32,6 +42,17 @@ const BlogHeader = ({ selectedTab, onTabClick }: BlogHeaderProps) => {
             }`}
           >
             {item}
+          </button>
+        ))}
+      </nav>
+      <nav className="flex flex-wrap justify-center gap-2 mt-2">
+        {pages.map((page) => (
+          <button
+            key={page.label}
+            onClick={() => navigate(page.path)}
+            className="font-pixel text-[10px] px-3 py-2 border-2 border-secondary/60 bg-secondary/15 text-secondary transition-colors hover:bg-secondary hover:text-secondary-foreground"
+          >
+            {page.label}
           </button>
         ))}
       </nav>
