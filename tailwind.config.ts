@@ -60,6 +60,10 @@ export default {
         games: "hsl(var(--cat-games))",
         anime: "hsl(var(--cat-anime))",
         tokusatsu: "hsl(var(--cat-tokusatsu))",
+        "nav-page": {
+          DEFAULT: "hsl(var(--nav-page))",
+          foreground: "hsl(var(--nav-page-foreground))",
+        },
       },
       fontFamily: {
         pixel: ["'Press Start 2P'", "monospace"],

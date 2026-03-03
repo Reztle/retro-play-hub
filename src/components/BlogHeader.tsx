@@ -14,6 +14,7 @@ const BlogHeader = ({ selectedTab, onTabClick }: BlogHeaderProps) => {
     { label: "About", path: "/about" },
     { label: "Art Gallery", path: "/art-gallery" },
     { label: "Music Shelf", path: "/music-shelf" },
+    { label: "Chatroom", path: "/chatroom" },
   ];
 
   return (
@@ -50,7 +51,11 @@ const BlogHeader = ({ selectedTab, onTabClick }: BlogHeaderProps) => {
           <button
             key={page.label}
             onClick={() => navigate(page.path)}
-            className="font-pixel text-[10px] px-3 py-2 border-2 border-secondary/60 bg-secondary/15 text-secondary transition-colors hover:bg-secondary hover:text-secondary-foreground"
+            className={`font-pixel text-[10px] px-3 py-2 border-2 transition-colors ${
+              location.pathname === page.path
+                ? "border-nav-page bg-nav-page text-nav-page-foreground"
+                : "border-nav-page/60 bg-nav-page/15 text-nav-page hover:bg-nav-page hover:text-nav-page-foreground"
+            }`}
           >
             {page.label}
           </button>
