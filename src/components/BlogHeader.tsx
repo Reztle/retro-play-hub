@@ -54,7 +54,7 @@ const BlogHeader = ({ selectedTab, onTabClick }: BlogHeaderProps) => {
             className={`font-pixel text-[10px] px-3 py-2 border-2 transition-colors ${
               location.pathname === page.path
                 ? "border-nav-page bg-nav-page text-nav-page-foreground"
-                : "border-nav-page/60 bg-nav-page/15 text-nav-page hover:bg-nav-page hover:text-nav-page-foreground"
+                : "border-nav-page/40 bg-muted text-nav-page hover:bg-nav-page hover:text-nav-page-foreground"
             }`}
           >
             {page.label}
