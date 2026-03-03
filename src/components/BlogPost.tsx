@@ -1,3 +1,5 @@
+import RetroMusicPlayer from "./RetroMusicPlayer";
+
 interface BlogPostProps {
   title: string;
   date: string;
@@ -50,16 +52,11 @@ const BlogPost = ({ title, date, tags = [], selectedTag, content, mood, music, a
           {music && <p className="text-accent">Now Playing: {music} ♪</p>}
         </div>
       )}
-      {audio && (
-        <div className="mt-3">
-          <audio
-            controls
-            className="w-full bg-card border-2 border-primary text-primary rounded-none ring-2 ring-primary"
-          >
-            <source src={encodeURI(audio)} />
-            Your browser does not support the audio element.
-          </audio>
-        </div>
+      {audio && music && (
+        <RetroMusicPlayer title={music} src={audio} />
+      )}
+      {audio && !music && (
+        <RetroMusicPlayer title="Unknown Track" src={audio} />
       )}
       <div className="flex gap-2 mt-3">
         <button className="font-pixel text-[8px] px-2 py-1 border border-border text-muted-foreground hover:text-primary transition-colors">
