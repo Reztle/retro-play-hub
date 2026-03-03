@@ -46,10 +46,9 @@ const BlogPost = ({ title, date, tags = [], selectedTag, content, mood, music, a
       <div className="font-body text-base text-foreground leading-relaxed whitespace-pre-line">
         {content}
       </div>
-      {(mood || music) && (
+      {(mood) && (
         <div className="mt-3 pt-2 border-t-2 border-border font-retro text-base">
           {mood && <p className="text-secondary">Current Mood: {mood}</p>}
-          {music && <p className="text-accent">Now Playing: {music} ♪</p>}
         </div>
       )}
       {audio && music && (

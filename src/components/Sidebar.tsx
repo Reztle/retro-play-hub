@@ -11,10 +11,10 @@ export default function Sidebar() {
   }, []);
 
   const links = [
-    { label: "Chatroom", url: "http://localhost:5000/chatroom" },
-    { label: "Henshin Justice", url: "#" },
-    { label: "Neon Hacking", url: "#" },
-    { label: "Cool Links", url: "#" },
+    { label: "Placeholder", url: "#" },
+    { label: "Placeholder", url: "#" },
+    { label: "Placeholder", url: "#" },
+    { label: "Placeholder", url: "#" },
   ];
 
   return (
@@ -22,7 +22,7 @@ export default function Sidebar() {
 
       {/* Cool Links */}
       <div className="panel-retro p-3">
-        <h3 className="font-pixel text-[10px] text-accent glow-yellow mb-2">Menu</h3>
+        <h3 className="font-pixel text-[10px] text-accent glow-yellow mb-2">Other Blogs</h3>
         <div className="pixel-divider mb-2" />
         <ul className="font-retro text-base text-foreground space-y-1">
           {links.map((link, i) => (
