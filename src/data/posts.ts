@@ -39,6 +39,7 @@ const posts: Post[] = [
   },
   {
     slug: "japan-cool-jacket-haul",
+    author: "Syber Sen",
     title: "Japan Cool Jacket Haul",
     date: "Feb 27, 2026",
     tags: ["Fashion", "Travel"],
