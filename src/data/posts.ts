@@ -28,6 +28,7 @@ const posts: Post[] = [
   },
   {
     slug: "free-big-beat-on-bandcamp",
+    author: "Syber Sen",
     title: "Free Big Beat on Bandcamp!!",
     date: "Feb 27, 2026",
     tags: ["Music"],
