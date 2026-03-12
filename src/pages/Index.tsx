@@ -3,6 +3,9 @@ import BlogHeader from "@/components/BlogHeader";
 import BlogPost from "@/components/BlogPost";
 import Sidebar from "@/components/Sidebar";
 import BlogFooter from "@/components/BlogFooter";
+import jacket1 from "@/assets/jacket1.jpg";
+import jacket2 from "@/assets/jacket2.jpg";
+import BlogFooter from "@/components/BlogFooter";
 
 const posts = [
    {
