@@ -18,7 +18,7 @@ const BlogPost = ({ author, title, date, tags = [], selectedTag, content, mood, 
   return (
     <article className="panel-retro p-4 mb-4">
       <div className="flex flex-wrap items-center gap-2 mb-2">
-        {author && <span className="font-pixel text-[10px] text-secondary glow-magenta">@{author}</span>}
+        {author && <span className="font-pixel text-[10px] text-secondary glow-magenta">{author}</span>}
         <span className="font-retro text-base text-muted-foreground">{date}</span>
       </div>
 
