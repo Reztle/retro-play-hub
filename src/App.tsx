@@ -27,6 +27,7 @@ const App = () => (
           <Route path="/art-gallery" element={<ArtGallery />} />
           <Route path="/music-shelf" element={<MusicShelf />} />
           <Route path="/chatroom" element={<Chatroom />} />
+          <Route path="/post/:slug" element={<PostPage />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
