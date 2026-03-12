@@ -8,6 +8,7 @@ import Links from "./pages/Links";
 import About from "./pages/About";
 import ArtGallery from "./pages/ArtGallery";
 import MusicShelf from "./pages/MusicShelf";
+import AlbumPage from "./pages/AlbumPage";
 import Chatroom from "./pages/Chatroom";
 import PostPage from "./pages/PostPage";
 import NotFound from "./pages/NotFound";
