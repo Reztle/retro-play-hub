@@ -16,6 +16,15 @@ export interface Post {
 
 const posts: Post[] = [
   {
+    slug: "post-apocalyptic-airship-survival",
+    author: "Syber Sen",
+    title: "Post apocalyptic airship survival!?",
+    date: "Mar 12, 2026",
+    tags: ["Games"],
+    content: `Last week Sekat and I were talking about what game we would play after we got bored of GTA Online. I scowered the steam and xbox sake tabs and found a couple of games, but none as cool as "Forever Skies", we watched the trailers and agreed it was epic. We're definitely going to be pkaying it, so expect updates.`,
+    mood: "Hyped for gaming 🎮",
+  },
+  {
     slug: "im-about-to-own-a-synthesizer",
     author: "Syber Sen",
     title: "I'm about to own a synthesizer!",
