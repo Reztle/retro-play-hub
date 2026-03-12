@@ -13,7 +13,7 @@ interface BlogPostProps {
 }
 
 // tags render below; category-specific styling has been removed
-const BlogPost = ({ title, date, tags = [], selectedTag, content, mood, music, audio }: BlogPostProps) => {
+const BlogPost = ({ title, date, tags = [], selectedTag, content, mood, music, audio, images = [] }: BlogPostProps) => {
   return (
     <article className="panel-retro p-4 mb-4">
       <div className="flex flex-wrap items-center gap-2 mb-2">
