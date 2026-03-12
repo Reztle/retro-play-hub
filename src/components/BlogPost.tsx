@@ -1,6 +1,7 @@
 import RetroMusicPlayer from "./RetroMusicPlayer";
 
 interface BlogPostProps {
+  author?: string;
   title: string;
   date: string;
   tags?: string[];
