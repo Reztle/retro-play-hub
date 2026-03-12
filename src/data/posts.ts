@@ -3,6 +3,7 @@ import jacket2 from "@/assets/jacket2.jpg";
 
 export interface Post {
   slug: string;
+  author: string;
   title: string;
   date: string;
   tags: string[];
