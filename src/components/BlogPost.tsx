@@ -8,7 +8,8 @@ interface BlogPostProps {
   content: string;
   mood?: string;
   music?: string;
-  audio?: string; // optional URL for playable audio
+  audio?: string;
+  images?: string[];
 }
 
 // tags render below; category-specific styling has been removed
