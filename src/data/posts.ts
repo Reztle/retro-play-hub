@@ -17,6 +17,7 @@ export interface Post {
 const posts: Post[] = [
   {
     slug: "im-about-to-own-a-synthesizer",
+    author: "Syber Sen",
     title: "I'm about to own a synthesizer!",
     date: "Feb 28, 2026",
     tags: ["Music"],
