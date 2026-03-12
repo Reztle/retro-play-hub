@@ -8,11 +8,12 @@ interface BlogPostProps {
   content: string;
   mood?: string;
   music?: string;
-  audio?: string; // optional URL for playable audio
+  audio?: string;
+  images?: string[];
 }
 
 // tags render below; category-specific styling has been removed
-const BlogPost = ({ title, date, tags = [], selectedTag, content, mood, music, audio }: BlogPostProps) => {
+const BlogPost = ({ title, date, tags = [], selectedTag, content, mood, music, audio, images = [] }: BlogPostProps) => {
   return (
     <article className="panel-retro p-4 mb-4">
       <div className="flex flex-wrap items-center gap-2 mb-2">
@@ -46,6 +47,19 @@ const BlogPost = ({ title, date, tags = [], selectedTag, content, mood, music, a
       <div className="font-body text-base text-foreground leading-relaxed whitespace-pre-line">
         {content}
       </div>
+      {images.length > 0 && (
+        <div className="flex flex-wrap gap-3 mt-3">
+          {images.map((src, idx) => (
+            <img
+              key={idx}
+              src={src}
+              alt={`${title} photo ${idx + 1}`}
+              className="w-48 h-auto border-2 border-primary object-cover"
+              loading="lazy"
+            />
+          ))}
+        </div>
+      )}
       {(mood) && (
         <div className="mt-3 pt-2 border-t-2 border-border font-retro text-base">
           {mood && <p className="text-secondary">Current Mood: {mood}</p>}
