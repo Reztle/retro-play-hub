@@ -9,6 +9,7 @@ import About from "./pages/About";
 import ArtGallery from "./pages/ArtGallery";
 import MusicShelf from "./pages/MusicShelf";
 import Chatroom from "./pages/Chatroom";
+import PostPage from "./pages/PostPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
