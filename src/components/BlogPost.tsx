@@ -1,6 +1,7 @@
 import RetroMusicPlayer from "./RetroMusicPlayer";
 
 interface BlogPostProps {
+  author?: string;
   title: string;
   date: string;
   tags?: string[];
@@ -13,10 +14,11 @@ interface BlogPostProps {
 }
 
 // tags render below; category-specific styling has been removed
-const BlogPost = ({ title, date, tags = [], selectedTag, content, mood, music, audio, images = [] }: BlogPostProps) => {
+const BlogPost = ({ author, title, date, tags = [], selectedTag, content, mood, music, audio, images = [] }: BlogPostProps) => {
   return (
     <article className="panel-retro p-4 mb-4">
       <div className="flex flex-wrap items-center gap-2 mb-2">
+        {author && <span className="font-pixel text-[10px] text-secondary glow-magenta">@{author}</span>}
         <span className="font-retro text-base text-muted-foreground">{date}</span>
       </div>
 

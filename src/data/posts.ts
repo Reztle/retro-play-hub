@@ -3,6 +3,7 @@ import jacket2 from "@/assets/jacket2.jpg";
 
 export interface Post {
   slug: string;
+  author: string;
   title: string;
   date: string;
   tags: string[];
@@ -16,6 +17,7 @@ export interface Post {
 const posts: Post[] = [
   {
     slug: "im-about-to-own-a-synthesizer",
+    author: "Syber Sen",
     title: "I'm about to own a synthesizer!",
     date: "Feb 28, 2026",
     tags: ["Music"],
@@ -26,6 +28,7 @@ const posts: Post[] = [
   },
   {
     slug: "free-big-beat-on-bandcamp",
+    author: "Syber Sen",
     title: "Free Big Beat on Bandcamp!!",
     date: "Feb 27, 2026",
     tags: ["Music"],
@@ -36,6 +39,7 @@ const posts: Post[] = [
   },
   {
     slug: "japan-cool-jacket-haul",
+    author: "Syber Sen",
     title: "Japan Cool Jacket Haul",
     date: "Feb 27, 2026",
     tags: ["Fashion", "Travel"],
