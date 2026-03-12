@@ -34,6 +34,7 @@ const posts = [
     content: `On my recent trip to Japan, I stumbled across a thrift store while waiting in a virtual queue at Ichiran Ramen. It was my first time thrifting ever, but I immediately locked on to these two jackets, I needed a winter jacket for the weather in Poland right now, and this one has such cool retro colors! The other one is nice too, I've been looking for this type of jacket and buying it used was way cheaper, than whatever a new one would've cost.`,
     mood: "Ecstatic 🧥",
     images: [jacket1, jacket2],
+  },
 ];
 
 const Index = () => {
