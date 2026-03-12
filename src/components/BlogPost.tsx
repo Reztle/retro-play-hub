@@ -47,6 +47,19 @@ const BlogPost = ({ title, date, tags = [], selectedTag, content, mood, music, a
       <div className="font-body text-base text-foreground leading-relaxed whitespace-pre-line">
         {content}
       </div>
+      {images.length > 0 && (
+        <div className="flex flex-wrap gap-3 mt-3">
+          {images.map((src, idx) => (
+            <img
+              key={idx}
+              src={src}
+              alt={`${title} photo ${idx + 1}`}
+              className="w-48 h-auto border-2 border-primary object-cover"
+              loading="lazy"
+            />
+          ))}
+        </div>
+      )}
       {(mood) && (
         <div className="mt-3 pt-2 border-t-2 border-border font-retro text-base">
           {mood && <p className="text-secondary">Current Mood: {mood}</p>}
